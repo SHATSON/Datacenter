@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class NodesRowComponent {
   @Input() node: any;
 
-  isDanger(prop: number) {
+  isDanger(prop: string | number) {
     return this.node[prop].used / this.node[prop].available > 0.7;
   }
 

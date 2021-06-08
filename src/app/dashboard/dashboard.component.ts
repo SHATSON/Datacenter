@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     for (let i = 4; i < 7; i++) this.cluster2.push(this.randomNode(i));
   }
 
-  private randomNode(i: number): Node {
+  private randomNode(i: string | number): Node {
     let node = {
       name: 'node' + i,
       cpu: { available: 16, used: this.randomInteger(0, 16) },
